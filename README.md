@@ -33,15 +33,21 @@ gulp.task('styleguide', function (done) {
 ## Options
 ### opts.location.src
 Type: `String` Default: `src/components/`
+
 Sets target for folder from which all the components will be taken.
+
 
 ### opts.location.dest
 Type: `String` Default: `dest/components/`
+
 Sets target for Pattern Library output location.
 
+
 ### opts.location.styleguide
-Type: `String` Default: `node_modules/chewingum/doc-template/'
+Type: `String` Default: `node_modules/chewingum/doc-template/`
+
 Sets target for pattern library templates. It is possible to modify existing pattern library look by moving doc-template to local folder and modifying this URL.
+
 
 
 ## Developing
@@ -51,6 +57,6 @@ Sets target for pattern library templates. It is possible to modify existing pat
  - Create a global link to the module `npm link`
  - Create a new project otside the compnent-library-core project
  - Install compnent-library-core in the new project `npm install chewingum`
- - Set te link to the local project `npm link chewingum`
+ - Set the link to the local project `npm link chewingum`
 
 
