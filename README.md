@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/karlisup/component-library-core.svg?branch=master)](https://travis-ci.org/karlisup/component-library-core)
-[![Coverage Status](https://coveralls.io/repos/github/karlisup/component-library-core/badge.svg?branch=master)](https://coveralls.io/github/karlisup/component-library-core?branch=master)
+[![Build Status](https://travis-ci.org/karlisup/chewingum.svg?branch=master)](https://travis-ci.org/karlisup/chewingum)
+[![Coverage Status](https://coveralls.io/repos/github/karlisup/chewingum/badge.svg?branch=master)](https://coveralls.io/github/karlisup/chewingum?branch=master)
 
-# Component Library Generator core
-It does the dirty job. From `src` folder it takes each `.twig` template file and by adding 
+# Chewingum
+From `src` folder it takes each `.twig` template file and by adding 
 * description (.md *optional*),
 * test data (.json *optional*),
 * style (.scss *optional*)
@@ -30,30 +30,27 @@ gulp.task('styleguide', function (done) {
 })
 ```
 
-## Develping
+## Options
+### opts.location.src
+Type: `String` Default: `src/components/`
+Sets target for folder from which all the components will be taken.
 
- - Clone the github project in a new directory `git clone https://github.com/karlisup/component-library-core`
+### opts.location.dest
+Type: `String` Default: `dest/components/`
+Sets target for Pattern Library output location.
+
+### opts.location.styleguide
+Type: `String` Default: `node_modules/chewingum/doc-template/'
+Sets target for pattern library templates. It is possible to modify existing pattern library look by moving doc-template to local folder and modifying this URL.
+
+
+## Developing
+
+ - Clone the github project in a new directory `git clone https://github.com/karlisup/chewingum`
  - Install npm dependencies `npm install`
  - Create a global link to the module `npm link`
  - Create a new project otside the compnent-library-core project
- - Install compnent-library-core in the new project `npm install component-library-core`
- - Set te link to the local project `npm link component-library-core`
+ - Install compnent-library-core in the new project `npm install chewingum`
+ - Set te link to the local project `npm link chewingum`
 
 
-## TODO
-This is work in progress. It lacks
-- [ ] real documentation
-- [ ] `.tt` template support (important in ongoing project)
-- [x] __option to pass JSON test data width `data@`__
-```json
-{"sidebar": {
-    "title": "Some title",
-		"navigation": "data@pathToNavigation.json"
-	}
-}
-```
-- [ ] write 3 more tests (_"action not perfection"_)
-
-Sincerely Yours,
-
-Karlis ☝
