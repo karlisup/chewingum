@@ -18,15 +18,10 @@ This is how it is used in [Gulp](http://gulpjs.com/).
 gulp.task('styleguide', function (done) {
   styleguide({
     location: {
-      root: '/',
       src: 'src/components/',
       dest: 'dest/components/'
-    },
-    extensions: {
-      template: '.twig'
     }
   })
-  done()
 })
 ```
 
