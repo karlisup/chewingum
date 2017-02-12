@@ -12,20 +12,10 @@
 		</header>
 		<div class="st-folder__content">
 			<div class="st-folder__component">
-				<iframe src="{{ compRawUrl }}"></iframe>
-				<script>
-					$(function () {
-						$('iframe').load(function () {
-							console.log("resize")
-							console.log(this)
-							this.style.height
-									= this.contentWindow.document.body.scrollHeight + "px"
-						})
-					})
-				</script>
+				{% include 'themes/github/components/00-atoms/iframe/iframe.twig' with { "src": compRawUrl, "onload": "resizeIframe(this)" } %}
 			</div>
 			<div class="st-folder__code">
-				{% include 'themes/github/components/01-molecules/tabs/tabs.twig' with { "class": "st-folder__code", "items": compCode }  %}
+				{% include 'themes/github/components/01-molecules/tabs/tabs.twig' with { "class": "st-folder__code", "items": compCode } %}
 			</div>
 		</div>
 	</section>
