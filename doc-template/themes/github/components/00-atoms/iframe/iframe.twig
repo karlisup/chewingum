@@ -1,0 +1,29 @@
+<script>
+	function resizeIframe( iframe ) {
+	var iframeHeight = $(iframe.contentWindow.document).height();
+	iframe.style.height = iframeHeight + "px";
+
+	// var tries = 3; // try 3 times to resize before quitting.
+	// var timeout = 2000; // interval between tries in miliseconds.
+	// //var iframe = document.getElementById('iframe');
+	// var FFpadding = 16; // Removes FF scrollbar (TODO: find fix)
+	// var iframeHeight = iframe.contentWindow.document.body.scrollHeight+FFpadding;
+
+	// // onload
+	// iframe.style.height = iframeHeight + "px";
+	// var setIframeHeight = setInterval( function(){
+	// 	if (tries > 0 ) {
+	// 		newHeight = iframe.contentWindow.document.body.scrollHeight+FFpadding;
+	// 		if (newHeight > iframeHeight) {
+	// 			console.log(tries);
+	// 			iframeHeight = newHeight;
+	// 			iframe.style.height = iframe.contentWindow.document.body.scrollHeight+FFpadding+"px";
+	// 			tries--;
+	// 		}
+	// 	} else {
+	// 		clearInterval(setIframeHeight)
+	// 	}
+	// }, timeout)
+	}
+</script>
+<iframe {% if onload %}onload="{{onload}}" {% endif %}src="{{src}}"></iframe>
