@@ -210,23 +210,4 @@ var Search = (function () {
   }
 })()
 
-var filterItems = [
-  {
-    "title": "All",
-    "regex": ""
-  },
-  {
-    "title": "Atoms",
-    "regex": "00-atoms"
-  },
-  {
-    "title": "Molecules",
-    "regex": "01-molecules"
-  },
-  {
-    "title": "Organisms",
-    "regex": "02-organisms"
-  }
-]
-
 Search.init('searchBox', 'searchResults', searchableItems, filterItems)
