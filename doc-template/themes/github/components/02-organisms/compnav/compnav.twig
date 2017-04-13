@@ -13,8 +13,9 @@
 	<nav class="cl-compnav__nav">
 		<script>
 			// inject searchable items in global scope
-			var searchableItems = {{ searchableItems|json_encode() }}
-			// var searchableItems = {{ searchableItems|json_encode() }}
+			var searchableItems = {{ searchableItems|json_encode() }};
+			// inject filter items in global scope
+            var filterItems = {{ filterItems|json_encode() }};
 		</script>
 		{# search results #}
 		{% include 'themes/github/components/01-molecules/resultlist/resultlist.twig' with {"id":"searchResults"} %}
