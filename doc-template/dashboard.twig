@@ -24,7 +24,11 @@
 					{% block content %}There is no content{% endblock %}
 				</main>
 				<aside class="clib__sidebar">
-					{% include 'themes/github/components/02-organisms/compnav/compnav.twig' with {'title': 'Your components', 'searchableItems': searchableItems} %}
+					{% include 'themes/github/components/02-organisms/compnav/compnav.twig' with {
+                        'title': 'Your components',
+                        'searchableItems': searchableItems,
+                        'filterItems': filterItems
+                    } %}
 				</aside>
 			</div>
 		</div>
