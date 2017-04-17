@@ -210,7 +210,7 @@ var Search = (function () {
   }
 })()
 
-var filterItems = [
+    /*var filterItems = [
   {
     "title": "All",
     "regex": ""
@@ -227,7 +227,7 @@ var filterItems = [
     "title": "Organisms",
     "regex": "02-organisms"
   }
-]
+]*/
 
 Search.init('searchBox', 'searchResults', searchableItems, filterItems)
 
