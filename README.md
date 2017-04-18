@@ -1,5 +1,30 @@
-[![Build Status](https://travis-ci.org/karlisup/chewingum.svg?branch=master)](https://travis-ci.org/karlisup/chewingum)
-[![Coverage Status](https://coveralls.io/repos/github/karlisup/chewingum/badge.svg?branch=master)](https://coveralls.io/github/karlisup/chewingum?branch=master)
+
+
+<p align="center">
+  <a href="https://travis-ci.org/karlisup/chewingum" title="Build Status">
+   <img src="https://img.shields.io/travis/karlisup/chewingum/master.svg?style=flat-square" />
+  </a>
+  <a href="https://coveralls.io/r/karlisup/chewingum?branch=master" title="Coverage Status">
+    <img src="https://img.shields.io/coveralls/karlisup/chewingum.svg?style=flat-square" />
+  </a>
+  <a href="https://www.npmjs.com/package/chewingum" title="npm">
+    <img src="https://img.shields.io/npm/dm/chewingum.svg?style=flat-square" />
+  </a>
+</p>
+<p align="center">
+  <a href="https://www.npmjs.com/package/chewingum" title="NPM version">
+    <img src="https://img.shields.io/npm/v/chewingum.svg?style=flat-square" />
+  </a>
+  <a href="https://david-dm.org/karlisup/chewingum" title="Dependency Status">
+    <img src="https://img.shields.io/david/karlisup/chewingum.svg?style=flat-square&label=deps" />
+  </a>
+  <a href="https://david-dm.org/karlisup/chewingum#info=devDependencies" title="devDependency Status">
+    <img src="https://img.shields.io/david/dev/karlisup/chewingum.svg?style=flat-square&label=devDeps" />
+  </a>
+</p>
+<p align="center"><a href="https://www.github.com/karlisup/chewingum"><img src="https://placehold.it/200x125/" /></a></p>
+<p align="center">Documentation generator for Pattern Library.</p>
+<p align="center">Follow <a href="https://twitter.com/chewingumjs">@chewingumjs</a> on twitter for news & updates.</p>
 
 # Chewingum
 From `src` folder it takes each `.twig` template file and by adding 
@@ -30,6 +55,12 @@ gulp.task('styleguide', function (done) {
 Type: `String` Default: `src/components/`
 
 Sets target for folder from which all the components will be taken.
+
+
+### opts.filterItems
+Type: `Array` Default: `[]`
+
+Pass tabs that filter search results by regular expression. Example: `[{'title': 'Atoms','regex': '01-atoms'}]`.
 
 
 ### opts.location.dest
