@@ -151,6 +151,6 @@ Sets target for pattern library templates. It is possible to modify existing pat
 
 
 ## Contribute
-TODO: Help us make this project better - Contributing guide!
+Help us make this project better - [Contributing guide](/CONTRIBUTING.md)!
 
 
