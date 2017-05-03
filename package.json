@@ -1,7 +1,7 @@
 {
   "name": "chewingum",
   "description": "Documentation generator for Pattern Library.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "dependencies": {
     "better-console": "^1.0.0",
