@@ -6,7 +6,7 @@ var chai = require('chai')
 var expect = chai.expect
 var getOptions = require('../lib/compolib.getOptions')
 
-describe('CompoLib.getOptions', function () {
+describe('compolib.getOptions', function () {
   // if value passed - passed value is taken
   it('should return passed option', function () {
     expect(
