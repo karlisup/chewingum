@@ -3,13 +3,13 @@
 
 var chai = require('chai')
 var expect = chai.expect
+var path = require('path')
 
 var processTemplate = require('../lib/compolib.processTemplate.js')
 var getOptions = require('../lib/compolib.getOptions')
 var opts = getOptions()
 
 // processTemplate(opts, component, files.data)
-
 
 describe('compolib.processTemplate', function () {
   it('should return that styleguide location by default is located in package folder', function () {
