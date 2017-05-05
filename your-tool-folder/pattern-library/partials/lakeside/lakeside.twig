@@ -1,0 +1,18 @@
+<article class="lakeside {{class}}">
+	{% if image %}
+		<aside class="lakeside__media">
+			{% include 'partials/images/thumbnail.twig' %}
+		</aside>
+	{% endif %}
+	<div class="lakeside__body">
+		<div class="lakeside__content">
+			{% include 'partials/title/title.twig' with title %}
+			{% if summary %}<p class="lakeside__summary long-primer">{{ summary }}</p>{% endif %}
+		</div>
+		<div class="lakeside__meta">
+			{% include 'partials/lists/list-inline.twig' with listItems %}
+		</div>
+	</div>
+	<a href="#" class="lakeside__link" aria-hidden="true" tabindex="-1">{{ title.title }}</a>
+</article>
+

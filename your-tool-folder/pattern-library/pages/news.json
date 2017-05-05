@@ -1,0 +1,21 @@
+{
+	"articleHero": {
+		"class":"lakeside--large",
+		"image": true,
+		"type":"double-pica",
+		"title": "data@partials/title/title.json",
+		"summary":"Swansea take a point at Man Utd, while Everton play Chelsea and Boro host Man City - updates & analysis from a big day in the Premier League.",
+		"listItems": "data@partials/lists/list-inline.json"
+	},
+	"article": "data@partials/lakeside/lakeside.json",
+	"articleHorizontal": {
+		"class":"lakeside--horizontal",
+		"image": true,
+		"title": "data@partials/title/title.json",
+		"listItems": "data@partials/lists/list-inline.json"
+	},
+	"articleNoImg": {
+		"title": "data@partials/title/title.json",
+		"listItems": "data@partials/lists/list-inline.json"
+	}
+}

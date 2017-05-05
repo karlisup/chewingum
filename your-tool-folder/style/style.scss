@@ -1,0 +1,17 @@
+// -------------------------------------
+// general style
+// -------------------------------------
+@import 'reset';             // Mayers reset
+@import 'colors';            // color variables
+@import 'mixins';            // most often used functions
+@import 'classgrid';         // bootstrap class grid
+@import 'font-awesome';      // add font-icons
+@import 'scaffolding';       // page scaffolding
+
+// -------------------------------------
+// pattern style
+// -------------------------------------
+@import '../pattern-library/partials/lakeside/lakeside';
+@import '../pattern-library/partials/lists/list-inline';
+@import '../pattern-library/partials/title/title';
+@import '../pattern-library/partials/link/link';

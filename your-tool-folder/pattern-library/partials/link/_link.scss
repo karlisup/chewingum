@@ -1,0 +1,10 @@
+$color-link: $color__blue--40;
+
+.link {
+	color: $color__black;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+		color: $color-link;
+	}
+}

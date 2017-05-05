@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chewingum</title>
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="Karlis Upitis">
+	<!-- TODO: place for twitter/facebook cards -->
+
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="/assets/chewingum.css">
+	<script src="/assets/jquery-2.2.3.min.js"></script>
+</head>
+<body>
+	
+	<div class="clib" id="page">
+		<header class="clib__header"></header>
+		<div class="clib__wrapper">
+			<div class="clib__container">
+				<main class="clib__main" role="main">
+					<div class="st-folder">
+		<section class="st-folder__template">
+		<header class="st-folder__header">
+			<h2 class="st-folder__path">
+				<a href="/partials/lakeside/raw.lakeside.html">partials/lakeside/lakeside.twig</a>
+			</h2>
+		</header>
+		<div class="st-folder__content">
+			<div class="st-folder__component">
+				<script>
+	function resizeIframe( iframe ) {
+	var iframeHeight = $(iframe.contentWindow.document).height();
+	iframe.style.height = iframeHeight + "px";
+
+	// var tries = 3; // try 3 times to resize before quitting.
+	// var timeout = 2000; // interval between tries in miliseconds.
+	// //var iframe = document.getElementById('iframe');
+	// var FFpadding = 16; // Removes FF scrollbar (TODO: find fix)
+	// var iframeHeight = iframe.contentWindow.document.body.scrollHeight+FFpadding;
+
+	// // onload
+	// iframe.style.height = iframeHeight + "px";
+	// var setIframeHeight = setInterval( function(){
+	// 	if (tries > 0 ) {
+	// 		newHeight = iframe.contentWindow.document.body.scrollHeight+FFpadding;
+	// 		if (newHeight > iframeHeight) {
+	// 			console.log(tries);
+	// 			iframeHeight = newHeight;
+	// 			iframe.style.height = iframe.contentWindow.document.body.scrollHeight+FFpadding+"px";
+	// 			tries--;
+	// 		}
+	// 	} else {
+	// 		clearInterval(setIframeHeight)
+	// 	}
+	// }, timeout)
+	}
+</script>
+<iframe onload="resizeIframe(this)" src="/partials/lakeside/raw.lakeside.html"></iframe>			</div>
+			<div class="st-folder__code">
+				<div class="cl-tabs st-folder__code">
+	<ul class="cl-tabs__list">
+					<li class="cl-tabs__item" id="tab-tmpl" role="tab" aria-selected="true" aria-controls="panel-tmpl">Markup</li>
+					<li class="cl-tabs__item" id="tab-style" role="tab" aria-selected="false" aria-controls="panel-style">Style</li>
+					<li class="cl-tabs__item" id="tab-data" role="tab" aria-selected="false" aria-controls="panel-data">JSON</li>
+			</ul>
+		<div class="cl-tabs__panel" id="panel-tmpl" role="tabpanel" aria-hidden="false" aria-labelledby="tab-tmpl"><pre><code>&lt;article <span class="hljs-keyword">class</span>=<span class="hljs-string">"lakeside {{class}}"</span>&gt;
+	{% <span class="hljs-keyword">if</span> image %}
+		&lt;aside <span class="hljs-keyword">class</span>=<span class="hljs-string">"lakeside__media"</span>&gt;
+			{% include <span class="hljs-string">'partials/images/thumbnail.twig'</span> %}
+		&lt;/aside&gt;
+	{% endif %}
+	&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"lakeside__body"</span>&gt;
+		&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"lakeside__content"</span>&gt;
+			{% include <span class="hljs-string">'partials/title/title.twig'</span> with title %}
+			{% <span class="hljs-keyword">if</span> summary %}&lt;p <span class="hljs-keyword">class</span>=<span class="hljs-string">"lakeside__summary long-primer"</span>&gt;{{ summary }}&lt;/p&gt;{% endif %}
+		&lt;/div&gt;
+		&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"lakeside__meta"</span>&gt;
+			{% include <span class="hljs-string">'partials/lists/list-inline.twig'</span> with listItems %}
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;a href=<span class="hljs-string">"#"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"lakeside__link"</span> aria-hidden=<span class="hljs-string">"true"</span> tabindex=<span class="hljs-string">"-1"</span>&gt;{{ title.title }}&lt;/a&gt;
+&lt;/article&gt;
+
+</code></pre></div>
+		<div class="cl-tabs__panel" id="panel-style" role="tabpanel" aria-hidden="true" aria-labelledby="tab-style"><pre><code>.lakeside {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: <span class="hljs-number">16</span>px;
+	&amp;__media {
+		img {
+			max-width: <span class="hljs-number">100</span>%;
+		}
+	}
+	&amp;__body {
+		display: flex; <span class="hljs-comment">// to align meta at the bottom</span>
+		flex: <span class="hljs-number">1</span> <span class="hljs-number">1</span> auto;
+		flex-direction: column;
+		justify-content: space-between;
+
+		.link {
+			<span class="hljs-comment">// to position link over link overlay</span>
+			position: relative;
+			z-index: <span class="hljs-number">1</span>;
+		}
+	}
+		&amp;__content {}
+		&amp;__meta {
+			margin-top: <span class="hljs-number">1</span>rem;
+		}
+		&amp;__summary {
+			margin-top: <span class="hljs-number">0.5</span>rem;
+		}
+
+	&amp;__link {
+		display: block;
+		position: absolute;
+		top: <span class="hljs-number">0</span>;
+		right: <span class="hljs-number">0</span>;
+		bottom: <span class="hljs-number">0</span>;
+		left: <span class="hljs-number">0</span>;
+
+		overflow: hidden;
+		text-indent: <span class="hljs-number">200</span>%;
+		white-space: nowrap;
+		z-index: <span class="hljs-number">0</span>;
+	}
+	
+	<span class="hljs-comment">/**
+	 * Hero lakeside
+	 */</span>
+	&amp;--large {
+		flex-direction: row;
+	}
+	&amp;--large .lakeside {
+		&amp;__media {
+			<span class="hljs-meta">@extend</span> .col-sm-<span class="hljs-number">8</span>;
+		}
+		&amp;__body {
+			<span class="hljs-meta">@extend</span> .col-sm-<span class="hljs-number">4</span>;
+		}
+	}
+
+	<span class="hljs-comment">/**
+	 * Horizontal
+	 */</span>
+	&amp;--horizontal {
+		flex-direction: row;
+	}
+	&amp;--horizontal .lakeside {
+		&amp;__media {
+			<span class="hljs-meta">@extend</span> .col-sm-<span class="hljs-number">5</span>;
+			+ .lakeside__body {
+				<span class="hljs-meta">@extend</span> .col-sm-<span class="hljs-number">7</span>;
+			}
+		}
+	}
+	<span class="hljs-comment">// if inside col-xx-xx, remove side padding.</span>
+	div[<span class="hljs-class"><span class="hljs-keyword">class</span>^</span>=<span class="hljs-string">"col-"</span>] &amp;--horizontal .lakeside {
+		&amp;__media {
+			padding-left: <span class="hljs-number">0</span>;
+		}
+		&amp;__body {
+			padding-right: <span class="hljs-number">0</span>;
+		}
+	}
+	
+}</code></pre></div>
+		<div class="cl-tabs__panel" id="panel-data" role="tabpanel" aria-hidden="true" aria-labelledby="tab-data"><pre><code>{
+	<span class="hljs-attr">"image"</span>: <span class="hljs-literal">true</span>,
+	<span class="hljs-attr">"title"</span>: {
+		<span class="hljs-attr">"class"</span>: <span class="hljs-string">"lakeside__title u-bold"</span>,
+		<span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>,
+		<span class="hljs-attr">"title"</span>: <span class="hljs-string">"Some longer title with seven short - Words"</span>
+	},
+	<span class="hljs-attr">"listItems"</span>: {
+		<span class="hljs-attr">"items"</span>: [
+			{
+				<span class="hljs-attr">"icon"</span>: <span class="hljs-string">"time"</span>,
+				<span class="hljs-attr">"title"</span>: <span class="hljs-string">"20h"</span>
+			},
+			{
+				<span class="hljs-attr">"link"</span>: {
+					<span class="hljs-attr">"src"</span>: <span class="hljs-string">"#"</span>,
+					<span class="hljs-attr">"title"</span>: <span class="hljs-string">"Boxing"</span>
+				}
+			},
+			{
+				<span class="hljs-attr">"icon"</span>: <span class="hljs-string">"comment-alt"</span>,
+				<span class="hljs-attr">"title"</span>: <span class="hljs-string">"108"</span>
+			}
+		]
+	}
+}</code></pre></div>
+	</div>			</div>
+		</div>
+	</section>
+</div>
+				</main>
+				<aside class="clib__sidebar">
+					<div class="cl-compnav" >
+	<header class="cl-compnav__header">
+		<h3 class="cl-compnav__title">
+			Your components
+			<span class="cl-badge">6</span>		</h3>
+	</header>
+	<div class="cl-compnav__filterbar">
+		<input type="text" id="searchBox" class="cl-search" placeholder="Find a component..." autoFocus />		<ul class="cl-filter">
+	
+	
+</ul>	</div>
+	<nav class="cl-compnav__nav">
+		<script>
+			// inject searchable items in global scope
+			var searchableItems = [["news","pages","/pages/news.html"],["thumbnail","partials","/partials/images/thumbnail.html"],["lakeside","partials","/partials/lakeside/lakeside.html"],["link","partials","/partials/link/link.html"],["list-inline","partials","/partials/lists/list-inline.html"],["title","partials","/partials/title/title.html"]];
+			// inject filter items in global scope
+            var filterItems = [{"title":"partials","regex":"partials"},{"title":"pages","regex":"pages"}];
+		</script>
+		
+		<ul id="searchResults" class="cl-resultlist">
+	
+	
+</ul></div>
+				</aside>
+			</div>
+		</div>
+		<div class="clib__container">
+			<footer class="clib__footer"></footer>
+		</div>
+	</div>
+
+	<!-- javascript goes here -->
+	<script src="/assets/chewingum.js"></script>
+</body>
+</html>

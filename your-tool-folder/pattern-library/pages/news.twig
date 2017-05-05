@@ -1,0 +1,33 @@
+<div class="container">
+	<!-- large lakeside -->
+	<div class="row">
+		{% include 'partials/lakeside/lakeside.twig' with articleHero only %}
+	</div>
+	
+	<!-- normal lakesides -->
+	<div class="row">
+		{% for i in 0..2 %}
+			<div class="col-sm-4">
+				{% include 'partials/lakeside/lakeside.twig' with article %}
+			</div>
+		{% endfor %}
+	</div>
+
+	<!-- horizontal lakesides -->
+	<div class="row">
+		{% for i in 0..9 %}
+			<div class="col-sm-6">
+				{% include 'partials/lakeside/lakeside.twig' with articleHorizontal %}
+			</div>
+		{% endfor %}
+	</div>
+
+	<!-- lakesides without image -->
+	<div class="row">
+		{% for i in 0..3 %}
+			<div class="col-sm-6">
+				{% include 'partials/lakeside/lakeside.twig' with articleNoImg %}
+			</div>
+		{% endfor %}
+	</div>
+</div>

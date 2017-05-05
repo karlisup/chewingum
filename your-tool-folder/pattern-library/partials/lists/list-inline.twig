@@ -1,0 +1,13 @@
+<ul class="list-inline{% if divided %} list-inline--divided{% endif %}">
+	{% for item in items %}
+		<li class="list-inline__item">
+			{% if item.icon %}<i class="icon-{{item.icon}}" aria-hidden="true"></i>{% endif %}
+			{% if item.link %}
+				{% include 'partials/link/link.twig' with item.link %}
+				{# <a href="{{item.link}}">{{item.title}}</a> #}
+			{% else %}
+				{{item.title}}
+			{% endif %}
+		</li>
+	{% endfor %}
+</ul>

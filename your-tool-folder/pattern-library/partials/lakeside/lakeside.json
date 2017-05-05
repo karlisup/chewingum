@@ -1,0 +1,5 @@
+{
+	"image": true,
+	"title": "data@partials/title/title.json",
+	"listItems": "data@partials/lists/list-inline.json"
+}

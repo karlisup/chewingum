@@ -1,0 +1,8 @@
+<{{tag|default("h3")}} class="{{type|default("pica")}} {{class}}">
+	{% if link %}
+		{% include 'partials/link/link.twig' with { 'src': '#', 'title': title } %}
+		{# <a href="{{link}}" class="pica__link">{{title}}</a> #}
+	{% else %}
+		{{title}}
+	{% endif %}
+</{{tag|default("h3")}}>

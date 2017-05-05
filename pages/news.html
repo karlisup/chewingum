@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chewingum</title>
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="Karlis Upitis">
+	<!-- TODO: place for twitter/facebook cards -->
+
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="/assets/chewingum.css">
+	<script src="/assets/jquery-2.2.3.min.js"></script>
+</head>
+<body>
+	
+	<div class="clib" id="page">
+		<header class="clib__header"></header>
+		<div class="clib__wrapper">
+			<div class="clib__container">
+				<main class="clib__main" role="main">
+					<div class="st-folder">
+		<section class="st-folder__template">
+		<header class="st-folder__header">
+			<h2 class="st-folder__path">
+				<a href="/pages/raw.news.html">pages/news.twig</a>
+			</h2>
+		</header>
+		<div class="st-folder__content">
+			<div class="st-folder__component">
+				<script>
+	function resizeIframe( iframe ) {
+	var iframeHeight = $(iframe.contentWindow.document).height();
+	iframe.style.height = iframeHeight + "px";
+
+	// var tries = 3; // try 3 times to resize before quitting.
+	// var timeout = 2000; // interval between tries in miliseconds.
+	// //var iframe = document.getElementById('iframe');
+	// var FFpadding = 16; // Removes FF scrollbar (TODO: find fix)
+	// var iframeHeight = iframe.contentWindow.document.body.scrollHeight+FFpadding;
+
+	// // onload
+	// iframe.style.height = iframeHeight + "px";
+	// var setIframeHeight = setInterval( function(){
+	// 	if (tries > 0 ) {
+	// 		newHeight = iframe.contentWindow.document.body.scrollHeight+FFpadding;
+	// 		if (newHeight > iframeHeight) {
+	// 			console.log(tries);
+	// 			iframeHeight = newHeight;
+	// 			iframe.style.height = iframe.contentWindow.document.body.scrollHeight+FFpadding+"px";
+	// 			tries--;
+	// 		}
+	// 	} else {
+	// 		clearInterval(setIframeHeight)
+	// 	}
+	// }, timeout)
+	}
+</script>
+<iframe onload="resizeIframe(this)" src="/pages/raw.news.html"></iframe>			</div>
+			<div class="st-folder__code">
+				<div class="cl-tabs st-folder__code">
+	<ul class="cl-tabs__list">
+					<li class="cl-tabs__item" id="tab-tmpl" role="tab" aria-selected="true" aria-controls="panel-tmpl">Markup</li>
+					<li class="cl-tabs__item" id="tab-data" role="tab" aria-selected="false" aria-controls="panel-data">JSON</li>
+			</ul>
+		<div class="cl-tabs__panel" id="panel-tmpl" role="tabpanel" aria-hidden="false" aria-labelledby="tab-tmpl"><pre><code>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"container"</span>&gt;
+	<span class="xml"><span class="hljs-comment">&lt;!-- large lakeside --&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+		{% include 'partials/lakeside/lakeside.twig' with articleHero only %}
+	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+	
+	<span class="hljs-comment">&lt;!-- normal lakesides --&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+		{% for i in 0..2 %}
+			<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-4"</span>&gt;</span>
+				{% include 'partials/lakeside/lakeside.twig' with article %}
+			<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+		{% endfor %}
+	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+	<span class="hljs-comment">&lt;!-- horizontal lakesides --&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+		{% for i in 0..9 %}
+			<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-6"</span>&gt;</span>
+				{% include 'partials/lakeside/lakeside.twig' with articleHorizontal %}
+			<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+		{% endfor %}
+	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+	<span class="hljs-comment">&lt;!-- lakesides without image --&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+		{% for i in 0..3 %}
+			<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-6"</span>&gt;</span>
+				{% include 'partials/lakeside/lakeside.twig' with articleNoImg %}
+			<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+		{% endfor %}
+	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre></div>
+		<div class="cl-tabs__panel" id="panel-data" role="tabpanel" aria-hidden="true" aria-labelledby="tab-data"><pre><code>{
+	<span class="hljs-attr">"articleHero"</span>: {
+		<span class="hljs-attr">"class"</span>: <span class="hljs-string">"lakeside--large"</span>,
+		<span class="hljs-attr">"image"</span>: <span class="hljs-literal">true</span>,
+		<span class="hljs-attr">"type"</span>: <span class="hljs-string">"double-pica"</span>,
+		<span class="hljs-attr">"title"</span>: {
+			<span class="hljs-attr">"class"</span>: <span class="hljs-string">"lakeside__title u-bold"</span>,
+			<span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>,
+			<span class="hljs-attr">"title"</span>: <span class="hljs-string">"Some longer title with seven short - Words"</span>
+		},
+		<span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Swansea take a point at Man Utd, while Everton play Chelsea and Boro host Man City - updates &amp; analysis from a big day in the Premier League."</span>,
+		<span class="hljs-attr">"listItems"</span>: {
+			<span class="hljs-attr">"items"</span>: [
+				{
+					<span class="hljs-attr">"icon"</span>: <span class="hljs-string">"time"</span>,
+					<span class="hljs-attr">"title"</span>: <span class="hljs-string">"20h"</span>
+				},
+				{
+					<span class="hljs-attr">"link"</span>: {
+						<span class="hljs-attr">"src"</span>: <span class="hljs-string">"#"</span>,
+						<span class="hljs-attr">"title"</span>: <span class="hljs-string">"Boxing"</span>
+					}
+				},
+				{
+					<span class="hljs-attr">"icon"</span>: <span class="hljs-string">"comment-alt"</span>,
+					<span class="hljs-attr">"title"</span>: <span class="hljs-string">"108"</span>
+				}
+			]
+		}
+	},
+	<span class="hljs-attr">"article"</span>: {
+		<span class="hljs-attr">"image"</span>: <span class="hljs-literal">true</span>,
+		<span class="hljs-attr">"title"</span>: {
+			<span class="hljs-attr">"class"</span>: <span class="hljs-string">"lakeside__title u-bold"</span>,
+			<span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>,
+			<span class="hljs-attr">"title"</span>: <span class="hljs-string">"Some longer title with seven short - Words"</span>
+		},
+		<span class="hljs-attr">"listItems"</span>: {
+			<span class="hljs-attr">"items"</span>: [
+				{
+					<span class="hljs-attr">"icon"</span>: <span class="hljs-string">"time"</span>,
+					<span class="hljs-attr">"title"</span>: <span class="hljs-string">"20h"</span>
+				},
+				{
+					<span class="hljs-attr">"link"</span>: {
+						<span class="hljs-attr">"src"</span>: <span class="hljs-string">"#"</span>,
+						<span class="hljs-attr">"title"</span>: <span class="hljs-string">"Boxing"</span>
+					}
+				},
+				{
+					<span class="hljs-attr">"icon"</span>: <span class="hljs-string">"comment-alt"</span>,
+					<span class="hljs-attr">"title"</span>: <span class="hljs-string">"108"</span>
+				}
+			]
+		}
+	},
+	<span class="hljs-attr">"articleHorizontal"</span>: {
+		<span class="hljs-attr">"class"</span>: <span class="hljs-string">"lakeside--horizontal"</span>,
+		<span class="hljs-attr">"image"</span>: <span class="hljs-literal">true</span>,
+		<span class="hljs-attr">"title"</span>: {
+			<span class="hljs-attr">"class"</span>: <span class="hljs-string">"lakeside__title u-bold"</span>,
+			<span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>,
+			<span class="hljs-attr">"title"</span>: <span class="hljs-string">"Some longer title with seven short - Words"</span>
+		},
+		<span class="hljs-attr">"listItems"</span>: {
+			<span class="hljs-attr">"items"</span>: [
+				{
+					<span class="hljs-attr">"icon"</span>: <span class="hljs-string">"time"</span>,
+					<span class="hljs-attr">"title"</span>: <span class="hljs-string">"20h"</span>
+				},
+				{
+					<span class="hljs-attr">"link"</span>: {
+						<span class="hljs-attr">"src"</span>: <span class="hljs-string">"#"</span>,
+						<span class="hljs-attr">"title"</span>: <span class="hljs-string">"Boxing"</span>
+					}
+				},
+				{
+					<span class="hljs-attr">"icon"</span>: <span class="hljs-string">"comment-alt"</span>,
+					<span class="hljs-attr">"title"</span>: <span class="hljs-string">"108"</span>
+				}
+			]
+		}
+	},
+	<span class="hljs-attr">"articleNoImg"</span>: {
+		<span class="hljs-attr">"title"</span>: {
+			<span class="hljs-attr">"class"</span>: <span class="hljs-string">"lakeside__title u-bold"</span>,
+			<span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>,
+			<span class="hljs-attr">"title"</span>: <span class="hljs-string">"Some longer title with seven short - Words"</span>
+		},
+		<span class="hljs-attr">"listItems"</span>: {
+			<span class="hljs-attr">"items"</span>: [
+				{
+					<span class="hljs-attr">"icon"</span>: <span class="hljs-string">"time"</span>,
+					<span class="hljs-attr">"title"</span>: <span class="hljs-string">"20h"</span>
+				},
+				{
+					<span class="hljs-attr">"link"</span>: {
+						<span class="hljs-attr">"src"</span>: <span class="hljs-string">"#"</span>,
+						<span class="hljs-attr">"title"</span>: <span class="hljs-string">"Boxing"</span>
+					}
+				},
+				{
+					<span class="hljs-attr">"icon"</span>: <span class="hljs-string">"comment-alt"</span>,
+					<span class="hljs-attr">"title"</span>: <span class="hljs-string">"108"</span>
+				}
+			]
+		}
+	}
+}</code></pre></div>
+	</div>			</div>
+		</div>
+	</section>
+</div>
+				</main>
+				<aside class="clib__sidebar">
+					<div class="cl-compnav" >
+	<header class="cl-compnav__header">
+		<h3 class="cl-compnav__title">
+			Your components
+			<span class="cl-badge">6</span>		</h3>
+	</header>
+	<div class="cl-compnav__filterbar">
+		<input type="text" id="searchBox" class="cl-search" placeholder="Find a component..." autoFocus />		<ul class="cl-filter">
+	
+	
+</ul>	</div>
+	<nav class="cl-compnav__nav">
+		<script>
+			// inject searchable items in global scope
+			var searchableItems = [["news","pages","/pages/news.html"],["thumbnail","partials","/partials/images/thumbnail.html"],["lakeside","partials","/partials/lakeside/lakeside.html"],["link","partials","/partials/link/link.html"],["list-inline","partials","/partials/lists/list-inline.html"],["title","partials","/partials/title/title.html"]];
+			// inject filter items in global scope
+            var filterItems = [{"title":"partials","regex":"partials"},{"title":"pages","regex":"pages"}];
+		</script>
+		
+		<ul id="searchResults" class="cl-resultlist">
+	
+	
+</ul></div>
+				</aside>
+			</div>
+		</div>
+		<div class="clib__container">
+			<footer class="clib__footer"></footer>
+		</div>
+	</div>
+
+	<!-- javascript goes here -->
+	<script src="/assets/chewingum.js"></script>
+</body>
+</html>

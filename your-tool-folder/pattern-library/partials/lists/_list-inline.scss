@@ -1,0 +1,27 @@
+$color-list-border: $color__gray--86;
+$color-link: $color__green--21;
+
+.list-inline {
+	&__item {
+		display: inline-block;
+		margin-right: 6px;
+		margin-bottom: 0.25rem;
+		padding-right: 6px;
+
+		border-right: 1px solid $color-list-border;
+
+		&:last-child() {
+			// reset
+			margin-right: 0;
+			padding-right: 0;
+			border-right: 0;
+    	}
+
+    	.link {
+    		color: $color-link;
+    		&:hover {
+    			color: $color-link;
+    		}
+    	}
+	}
+}

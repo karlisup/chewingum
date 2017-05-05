@@ -1,0 +1,20 @@
+// -------------------------------------
+//   Clearfix
+// -------------------------------------
+@mixin clearfix() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// -------------------------------------
+//   Ellipsis
+// -------------------------------------
+@mixin ellipsis() {
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

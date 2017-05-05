@@ -1,0 +1,15 @@
+{
+	"items": [
+		{
+			"icon": "time",
+			"title": "20h"
+		},
+		{
+			"link": "data@partials/link/link.json"
+		},
+		{
+			"icon": "comment-alt",
+			"title": "108"
+		}
+	]
+}
