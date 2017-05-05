@@ -18,7 +18,8 @@ gulp.task('chewingum', function () {
   chewingum({
     location: {
       src: src,
-      dest: dest
+      dest: dest,
+      root: ''
     },
     // extensions: {
     //  template: '.nunjucks'
