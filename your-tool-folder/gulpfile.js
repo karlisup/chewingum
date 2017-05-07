@@ -1,6 +1,6 @@
 // setting general settings
 var src = './pattern-library/'
-var dest = '../'
+var dest = '../demo/'
 
 // gulp modules
 var gulp = require('gulp')
@@ -19,7 +19,7 @@ gulp.task('chewingum', function () {
     location: {
       src: src,
       dest: dest,
-      root: ''
+      root: 'chewingum/demo/'
     },
     // extensions: {
     //  template: '.nunjucks'
