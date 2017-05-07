@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chewingum</title>
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="Karlis Upitis">
+	<!-- TODO: place for twitter/facebook cards -->
+
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="chewingum/demo/assets/chewingum.css">
+	<script src="chewingum/demo/assets/jquery-2.2.3.min.js"></script>
+</head>
+<body>
+	
+	<div class="clib" id="page">
+		<header class="clib__header"></header>
+		<div class="clib__wrapper">
+			<div class="clib__container">
+				<main class="clib__main" role="main">
+					<div class="st-folder">
+		<section class="st-folder__template">
+		<header class="st-folder__header">
+			<h2 class="st-folder__path">
+				<a href="chewingum/demo/partials/title/raw.title.html">partials/title/title.twig</a>
+			</h2>
+		</header>
+		<div class="st-folder__content">
+			<div class="st-folder__component">
+				<script>
+	function resizeIframe( iframe ) {
+	var iframeHeight = $(iframe.contentWindow.document).height();
+	iframe.style.height = iframeHeight + "px";
+
+	// var tries = 3; // try 3 times to resize before quitting.
+	// var timeout = 2000; // interval between tries in miliseconds.
+	// //var iframe = document.getElementById('iframe');
+	// var FFpadding = 16; // Removes FF scrollbar (TODO: find fix)
+	// var iframeHeight = iframe.contentWindow.document.body.scrollHeight+FFpadding;
+
+	// // onload
+	// iframe.style.height = iframeHeight + "px";
+	// var setIframeHeight = setInterval( function(){
+	// 	if (tries > 0 ) {
+	// 		newHeight = iframe.contentWindow.document.body.scrollHeight+FFpadding;
+	// 		if (newHeight > iframeHeight) {
+	// 			console.log(tries);
+	// 			iframeHeight = newHeight;
+	// 			iframe.style.height = iframe.contentWindow.document.body.scrollHeight+FFpadding+"px";
+	// 			tries--;
+	// 		}
+	// 	} else {
+	// 		clearInterval(setIframeHeight)
+	// 	}
+	// }, timeout)
+	}
+</script>
+<iframe onload="resizeIframe(this)" src="chewingum/demo/partials/title/raw.title.html"></iframe>			</div>
+			<div class="st-folder__code">
+				<div class="cl-tabs st-folder__code">
+	<ul class="cl-tabs__list">
+					<li class="cl-tabs__item" id="tab-tmpl" role="tab" aria-selected="true" aria-controls="panel-tmpl">Markup</li>
+					<li class="cl-tabs__item" id="tab-style" role="tab" aria-selected="false" aria-controls="panel-style">Style</li>
+					<li class="cl-tabs__item" id="tab-data" role="tab" aria-selected="false" aria-controls="panel-data">JSON</li>
+			</ul>
+		<div class="cl-tabs__panel" id="panel-tmpl" role="tabpanel" aria-hidden="false" aria-labelledby="tab-tmpl"><pre><code>&lt;{{tag|<span class="hljs-keyword">default</span>(<span class="hljs-string">"h3"</span>)}} <span class="hljs-keyword">class</span>=<span class="hljs-string">"{{type|default("</span>pica<span class="hljs-string">")}} {{class}}"</span>&gt;
+	{% <span class="hljs-keyword">if</span> link %}
+		{% include <span class="hljs-string">'partials/link/link.twig'</span> with { <span class="hljs-string">'src'</span>: <span class="hljs-string">'#'</span>, <span class="hljs-string">'title'</span>: title } %}
+		{<span class="hljs-meta"># &lt;a href="{{link}}" class="pica__link"&gt;{{title}}&lt;/a&gt; #}</span>
+	{% <span class="hljs-keyword">else</span> %}
+		{{title}}
+	{% endif %}
+&lt;/{{tag|<span class="hljs-keyword">default</span>(<span class="hljs-string">"h3"</span>)}}&gt;</code></pre></div>
+		<div class="cl-tabs__panel" id="panel-style" role="tabpanel" aria-hidden="true" aria-labelledby="tab-style"><pre><code><span class="hljs-comment">// http://www.bbc.co.uk/gel/guidelines/typography</span>
+
+.pica {
+    font-size: <span class="hljs-number">1</span>rem;
+    line-height: <span class="hljs-number">1.25</span>rem;
+}
+.<span class="hljs-keyword">double</span>-pica {
+	font-size: <span class="hljs-number">1.5</span>rem;
+    line-height: <span class="hljs-number">1.75</span>rem;
+}
+
+.<span class="hljs-keyword">long</span>-primer {
+	font-size: <span class="hljs-number">0.875</span>rem;
+    line-height: <span class="hljs-number">1.125</span>rem;
+}
+
+
+<span class="hljs-comment">// utility classes for title</span>
+.u-bold {
+	font-weight: <span class="hljs-number">600</span>;
+}</code></pre></div>
+		<div class="cl-tabs__panel" id="panel-data" role="tabpanel" aria-hidden="true" aria-labelledby="tab-data"><pre><code>{
+	<span class="hljs-attr">"class"</span>: <span class="hljs-string">"lakeside__title u-bold"</span>,
+	<span class="hljs-attr">"link"</span>: <span class="hljs-string">"#"</span>,
+	<span class="hljs-attr">"title"</span>: <span class="hljs-string">"Some longer title with seven short - Words"</span>
+}</code></pre></div>
+	</div>			</div>
+		</div>
+	</section>
+</div>
+				</main>
+				<aside class="clib__sidebar">
+					<div class="cl-compnav" >
+	<header class="cl-compnav__header">
+		<h3 class="cl-compnav__title">
+			Your components
+			<span class="cl-badge">6</span>		</h3>
+	</header>
+	<div class="cl-compnav__filterbar">
+		<input type="text" id="searchBox" class="cl-search" placeholder="Find a component..." autoFocus />		<ul class="cl-filter">
+	
+	
+</ul>	</div>
+	<nav class="cl-compnav__nav">
+		<script>
+			// inject searchable items in global scope
+			var searchableItems = [["news","pages","/pages/news.html"],["thumbnail","partials","/partials/images/thumbnail.html"],["lakeside","partials","/partials/lakeside/lakeside.html"],["link","partials","/partials/link/link.html"],["list-inline","partials","/partials/lists/list-inline.html"],["title","partials","/partials/title/title.html"]];
+			// inject filter items in global scope
+            var filterItems = [{"title":"partials","regex":"partials"},{"title":"pages","regex":"pages"}];
+		</script>
+		
+		<ul id="searchResults" class="cl-resultlist">
+	
+	
+</ul></div>
+				</aside>
+			</div>
+		</div>
+		<div class="clib__container">
+			<footer class="clib__footer"></footer>
+		</div>
+	</div>
+
+	<!-- javascript goes here -->
+	<script src="chewingum/demo/assets/chewingum.js"></script>
+</body>
+</html>

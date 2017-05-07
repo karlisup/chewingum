@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chewingum</title>
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="Karlis Upitis">
+	<!-- TODO: place for twitter/facebook cards -->
+
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="chewingum/demo/assets/chewingum.css">
+	<script src="chewingum/demo/assets/jquery-2.2.3.min.js"></script>
+</head>
+<body>
+	
+	<div class="clib" id="page">
+		<header class="clib__header"></header>
+		<div class="clib__wrapper">
+			<div class="clib__container">
+				<main class="clib__main" role="main">
+					There is no content				</main>
+				<aside class="clib__sidebar">
+					<div class="cl-compnav" >
+	<header class="cl-compnav__header">
+		<h3 class="cl-compnav__title">
+			Your components
+			<span class="cl-badge">6</span>		</h3>
+	</header>
+	<div class="cl-compnav__filterbar">
+		<input type="text" id="searchBox" class="cl-search" placeholder="Find a component..." autoFocus />		<ul class="cl-filter">
+	
+	
+</ul>	</div>
+	<nav class="cl-compnav__nav">
+		<script>
+			// inject searchable items in global scope
+			var searchableItems = [["news","pages","/pages/news.html"],["thumbnail","partials","/partials/images/thumbnail.html"],["lakeside","partials","/partials/lakeside/lakeside.html"],["link","partials","/partials/link/link.html"],["list-inline","partials","/partials/lists/list-inline.html"],["title","partials","/partials/title/title.html"]];
+			// inject filter items in global scope
+            var filterItems = [{"title":"partials","regex":"partials"},{"title":"pages","regex":"pages"}];
+		</script>
+		
+		<ul id="searchResults" class="cl-resultlist">
+	
+	
+</ul></div>
+				</aside>
+			</div>
+		</div>
+		<div class="clib__container">
+			<footer class="clib__footer"></footer>
+		</div>
+	</div>
+
+	<!-- javascript goes here -->
+	<script src="chewingum/demo/assets/chewingum.js"></script>
+</body>
+</html>
