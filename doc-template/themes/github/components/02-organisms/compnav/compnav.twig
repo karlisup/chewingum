@@ -16,6 +16,8 @@
 			var searchableItems = {{ searchableItems|json_encode() }};
 			// inject filter items in global scope
             var filterItems = {{ filterItems|json_encode() }};
+            // root folder aka path to assets
+            var rootFolder = '{{ rootFolder }}';
 		</script>
 		{# search results #}
 		{% include 'themes/github/components/01-molecules/resultlist/resultlist.twig' with {"id":"searchResults"} %}
