@@ -8,7 +8,7 @@
   "devDependencies": {
     "autoprefixer": "^6.2.3",
     "browser-sync": "^2.10.1",
-    "chewingum": "0.0.3",
+    "chewingum": "^0.1.1",
     "del": "^2.2.2",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.1",
