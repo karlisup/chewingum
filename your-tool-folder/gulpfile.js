@@ -20,7 +20,7 @@ gulp.task('chewingum', function () {
       src: src,
       dest: dest,
       //root: '/'
-      //root: '/chewingum/demo/'
+      root: '/chewingum/demo/'
     },
     // extensions: {
     //  template: '.nunjucks'
