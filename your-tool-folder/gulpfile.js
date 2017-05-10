@@ -19,7 +19,8 @@ gulp.task('chewingum', function () {
     location: {
       src: src,
       dest: dest,
-      root: '/chewingum/demo/'
+      //root: '/'
+      //root: '/chewingum/demo/'
     },
     // extensions: {
     //  template: '.nunjucks'
@@ -43,6 +44,7 @@ gulp.task('server', function () {
   browserSync.init({
     server: {
       baseDir: dest
+      // baseDir: '../'
     },
     port: 9999,
     open: false,
