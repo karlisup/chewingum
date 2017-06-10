@@ -23,6 +23,7 @@
   </a>
 </p>
 <p align="center"><a href="https://www.github.com/karlisup/chewingum"><img src="https://placehold.it/200x125/" /></a></p>
+<p align="center"><a href="https://karlisup.github.io/chewingum/demo/partials/lakeside/lakeside.html" target="_blank">Demo</a></p>
 <p align="center">Documentation generator for Pattern Library.</p>
 <p align="center">Follow <a href="https://twitter.com/chewingumjs">@chewingumjs</a> on twitter for news & updates.</p>
 
@@ -34,20 +35,61 @@ As it is build upon `node.js` it uses multiple libraries to support various temp
 3. TODO `handlebars`
 
 ### Use API insted of `Copy`/`Paste`
-This is not a module that generates hardcoded `Lorem Ipsum` styleguide. It is a module that __generates reusable patterns__ from template taking .json demo data as a temporary input to test the pattern. It provides API to connect front end with the back end.
+You can build pattern libraries
+1. fast (reuse template, demo data)
+2. documented (have demo right beside documentation)
+3. link it directly into your project
 
-Button component:
-TODO <simple example of complex component>
+A component (e.g. `lakeside.twig`):
+```twig
+<article class="lakeside {{class}}">
+  {% if image %}
+    <aside class="lakeside__media">
+      <img src="image.src" alt="image.alt">
+    </aside>
+  {% endif %}
+  <div class="lakeside__body">
+    <div class="lakeside__content">
+      {% include 'partials/title/title.twig' with title %}
+      {% if summary %}<p class="lakeside__summary long-primer">{{ summary }}</p>{% endif %}
+    </div>
+    <div class="lakeside__meta">
+      {% include 'partials/lists/list-inline.twig' with listItems %}
+    </div>
+  </div>
+  <a href="#" class="lakeside__link" aria-hidden="true" tabindex="-1">{{ title.title }}</a>
+</article>
+```
 
-Usage:
-TODO <example of the usage>
+Usage (in `news-feed.twig`):
+```twig
+<div class="row">
+  {% for i in 0..2 %}
+    <div class="col-sm-4">
+      {% include 'partials/lakeside/lakeside.twig' with article %}
+    </div>
+  {% endfor %}
+</div>
+```
+
+Test data for demo generation (`lakeside.json`):
+```json
+{
+  "image": {
+    "src": "http://placehold.it/800x600/",
+    "alt": "placeholder"
+  },
+  "title": "data@partials/title/title.json",
+  "listItems": "data@partials/lists/list-inline.json"
+}
+```
 
 ### Customisable look
 Every self-worthy company has their own style guides and design principles they base their designs upon. Chewingum allows you to completely change visual look of the generated documentation to fit your needs. Here are some of the themes and their demos we've created:
 
-| Github (Demo) | PatternLab (Demo) | Fractal (Demo) |
+| Github ([Demo](https://karlisup.github.io/chewingum/demo//partials/lakeside/lakeside.html)) | PatternLab (Demo) | Fractal (Demo) |
 | :-----------: |:-----------------:| :-------------:|
-| ![Github theme](http://placehold.it/800x600/) | ![PatternLab theme](http://placehold.it/800x600/) | ![Fractal theme](http://placehold.it/800x600/) |
+| ![Github theme](https://github.com/karlisup/chewingum/blob/gh-pages/images/theme-github-preview.png) | ![PatternLab theme](http://placehold.it/800x600/) | ![Fractal theme](http://placehold.it/800x600/) |
 
 ## Usage
 ### Part I
