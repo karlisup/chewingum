@@ -79,7 +79,7 @@ var Search = (function () {
     var output = ''
 
     $.each(results, function (index, item) {
-      output += '<li class="cl-resultlist__item"><a class="cl-resultlist__link" href="' + rootFolder  + item.src + '" role="button">' +
+      output += '<li class="cl-resultlist__item"><a class="cl-resultlist__link" href="' + normalizePath(rootFolder + item.src) + '" role="button">' +
                   '<span class="cl-resultlist__ellipsis">' +
                     '<span class="cl-resultlist__text">' + item.highlighted + '</span> ' +
                     '<span class="cl-resultlist__descr">' + item.src + '</span>' +
@@ -87,6 +87,14 @@ var Search = (function () {
                 '</a></li>'
     })
     return output
+  }
+
+  /**
+   * item.src comes with '/' in front of path in combination with default rootFolder '/'
+   * the path would start with '//' which would cause a conflict.
+   */
+  function normalizePath (path) {
+    return path.replace('//','/')
   }
 
   function underActiveTab (path) {
