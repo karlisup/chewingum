@@ -1,5 +1,7 @@
 // setting general settings
-var src = './pattern-library/'
+//var src = './pattern-library/twig/';
+var src = './pattern-library/mustache/';
+//var src = './pattern-library/'
 var dest = '../demo/'
 
 // gulp modules
@@ -18,13 +20,14 @@ gulp.task('chewingum', function () {
   chewingum({
     location: {
       src: src,
-      dest: dest,
+      dest: dest
       //root: '/'
-      root: '/chewingum/demo/'
+      //root: '/chewingum/demo/'
     },
-    // extensions: {
-    //  template: '.nunjucks'
-    // },
+    extensions: {
+      //template: '.nunjucks'
+      template: '.mustache'
+    },
     filterItems: [
       {
         'title': 'partials',
@@ -33,6 +36,10 @@ gulp.task('chewingum', function () {
       {
         'title': 'pages',
         'regex': 'pages'
+      },
+      {
+        'title': 'all',
+        'regex': ''
       }
     ]
   })
