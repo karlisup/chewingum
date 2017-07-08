@@ -22,6 +22,7 @@
     "gulp-util": "^3.0.7",
     "lodash.assign": "^4.0.9",
     "lost": "^6.6.3",
+    "mustache": "^2.3.0",
     "picturefill": "^3.0.2",
     "pixrem": "^3.0.0",
     "postcss-custom-media": "^5.0.0",
