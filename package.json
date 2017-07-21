@@ -10,6 +10,7 @@
     "highlight": "^0.2.4",
     "marked": "0.3.6",
     "mkdirp": "^0.5.1",
+    "mustache": "^2.3.0",
     "ncp": "^2.0.0",
     "showdown": "^1.3.0",
     "twig": "^1.10.4",
