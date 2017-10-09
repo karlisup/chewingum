@@ -1,21 +1,19 @@
 {% extends 'layout.twig' %}
 {% block content %}
 <div class="st-folder">
-	{% if compInfo %}
-	<div class="st-folder__readme">{{ compInfo }}</div>
+	{% if readme %}
+	<div class="st-folder__readme">{{ readme }}</div>
 	{% endif %}
 	<section class="st-folder__template">
 		<header class="st-folder__header">
-			<h2 class="st-folder__path">
-				<a href="{{ compRawUrl }}">{{ tmplUrl }}</a>
-			</h2>
+			{{ rawTemplLinks }}
 		</header>
 		<div class="st-folder__content">
 			<div class="st-folder__component">
-				{% include 'themes/github/components/00-atoms/iframe/iframe.twig' with { "src": compRawUrl, "onload": "resizeIframe(this)" } %}
+				{% include 'themes/github/components/00-atoms/iframe/iframe.twig' with { "src": iframeDemoUrl, "onload": "resizeIframe(this)" } %}
 			</div>
 			<div class="st-folder__code">
-				{% include 'themes/github/components/01-molecules/tabs/tabs.twig' with { "class": "st-folder__code", "items": compCode } %}
+				{% include 'themes/github/components/01-molecules/tabs/tabs.twig' with { "class": "st-folder__code", "items": codePreview } %}
 			</div>
 		</div>
 	</section>
