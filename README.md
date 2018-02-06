@@ -25,7 +25,6 @@
 <p align="center"><a href="https://www.github.com/karlisup/chewingum"><img src="https://placehold.it/200x125/" /></a></p>
 <p align="center"><a href="https://karlisup.github.io/chewingum/demo/partials/lakeside/lakeside.html" target="_blank">Demo</a></p>
 <p align="center">Documentation generator for Pattern Library.</p>
-<p align="center">Follow <a href="https://twitter.com/chewingumjs">@chewingumjs</a> on twitter for news & updates.</p>
 
 ## Features
 ### Template engine agnostic
@@ -85,11 +84,11 @@ Test data for demo generation (`lakeside.json`):
 ```
 
 ### Customisable look
-Every self-worthy company has their own style guides and design principles they base their designs upon. Chewingum allows you to completely change visual look of the generated documentation to fit your needs. Here are some of the themes and their demos we've created:
+Every self-worthy company has their own style guides and design principles they base their designs upon. Chewingum allows you to completely change visual look of the generated documentation to fit your needs.
 
-| Github ([Demo](https://karlisup.github.io/chewingum/demo//partials/lakeside/lakeside.html)) | PatternLab (Demo) | Fractal (Demo) |
-| :-----------: |:-----------------:| :-------------:|
-| ![Github theme](https://github.com/karlisup/chewingum/blob/gh-pages/images/theme-github-preview.png) | ![PatternLab theme](http://placehold.it/800x600/) | ![Fractal theme](http://placehold.it/800x600/) |
+| Github-like ([Demo](https://karlisup.github.io/chewingum/demo//partials/lakeside/lakeside.html)) |
+| :-----------: |
+| ![Github theme](https://github.com/karlisup/chewingum/blob/gh-pages/images/theme-github-preview.png) |
 
 ## Usage
 ### Part I
