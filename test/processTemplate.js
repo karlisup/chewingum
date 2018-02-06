@@ -5,7 +5,7 @@ var chai = require('chai')
 var expect = chai.expect
 var path = require('path')
 
-var processTemplate = require('../lib/compolib.processTemplate.js')
+var processTemplate = require('../lib/ProcessTemplate.js')
 var getOptions = require('../lib/compolib.getOptions')
 var opts = getOptions()
 
